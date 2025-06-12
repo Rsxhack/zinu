@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZuckInu ($ZINU) – Add to MetaMask</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #fbbf24;
+    }
+    p {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+    button {
+      padding: 12px 26px;
+      font-size: 18px;
+      background-color: #fbbf24;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #f59e0b;
+    }
+    img {
+      margin-top: 40px;
+      width: 128px;
+      height: 128px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add $ZINU to MetaMask</h1>
+  <p>Click below to import the official ZuckInu token to your MetaMask wallet:</p>
+  <button onclick="addZINUToken()">Add $ZINU to MetaMask</button>
+  <img src="zinu-token-logo.png" alt="ZINU Logo">
+
+  <script>
+    async function addZINUToken() {
+      try {
+        const wasAdded = await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: '0x3aC6bfD8a066306E3Fa90A4c19b0Ab1781E57f5D',
+              symbol: 'ZINU',
+              decimals: 18,
+              image: 'https://zinu.vercel.app/zinu-token-logo.png'
+            },
+          },
+        });
+
+        if (wasAdded) {
+          alert('ZINU token successfully added!');
+        } else {
+          alert('User declined to add token.');
+        }
+      } catch (error) {
+        console.error(error);
+        alert('MetaMask interaction failed.');
+      }
+    }
+  </script>
+</body>
+</html>
