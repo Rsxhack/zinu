@@ -1,84 +1,91 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ZuckInu ($ZINU) – Add to MetaMask</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZuckInu | $ZINU</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" />
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #1a1a1a;
-      color: #fff;
+      background-color: #0b0b0f;
+      color: #f8f8f8;
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
       text-align: center;
-      padding: 80px 20px;
+      padding: 2rem 1rem;
     }
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      color: #fbbf24;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
-    p {
-      font-size: 1.2em;
-      color: #ccc;
-      margin-bottom: 40px;
+    .section {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
     }
-    button {
-      padding: 12px 26px;
-      font-size: 18px;
-      background-color: #fbbf24;
+    a {
+      color: #00ffd5;
+      text-decoration: none;
+    }
+    .token-info {
+      background-color: #111;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    .token-info p {
+      margin: 0.5rem 0;
+    }
+    .cta {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #00ffd5;
       color: #000;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #f59e0b;
-    }
-    img {
-      margin-top: 40px;
-      width: 128px;
-      height: 128px;
-      border-radius: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-  <h1>Add $ZINU to MetaMask</h1>
-  <p>Click below to import the official ZuckInu token to your MetaMask wallet:</p>
-  <button onclick="addZINUToken()">Add $ZINU to MetaMask</button>
-  <img src="zinu-token-logo.png" alt="ZINU Logo">
-  <a href="https://pancakeswap.finance/swap?outputCurrency=0x3aC6bfD8a066306E3Fa90A4c19b0Ab1781E57f5D" target="_blank">
-  <button>Buy $ZINU</button>
-</a>
-  
-  <script>
-    async function addZINUToken() {
-      try {
-        const wasAdded = await window.ethereum.request({
-          method: 'wallet_watchAsset',
-          params: {
-            type: 'ERC20',
-            options: {
-              address: '0x3aC6bfD8a066306E3Fa90A4c19b0Ab1781E57f5D',
-              symbol: 'ZINU',
-              decimals: 18,
-              image: 'https://zinu.vercel.app/zinu-token-logo.png'
-            },
-          },
-        });
+  <header>
+    <h1>ZuckInu ($ZINU)</h1>
+    <p>The Meme Has Awakened</p>
+  </header>  <section class="section">
+    <div class="token-info">
+      <h2>🔍 Token Info</h2>
+      <p><strong>Name:</strong> ZuckInu</p>
+      <p><strong>Symbol:</strong> $ZINU</p>
+      <p><strong>Contract:</strong> <code>0x3aC6bfD8a066306E3Fa90A4c19b0Ab1781E57f5D</code></p>
+      <p><strong>Total Supply:</strong> 1,000,000,000 ZINU</p>
+      <p><strong>Decimals:</strong> 18</p>
+      <p><strong>Chain:</strong> Binance Smart Chain (BEP-20)</p>
+      <p><strong>Tax:</strong> 0% Buy / 0% Sell</p>
+      <p><strong>Status:</strong> LP Locked | Ownership Renounced</p>
+    </div><div class="token-info">
+  <h2>📈 Trade & Chart</h2>
+  <p><a href="https://pancakeswap.finance/swap?outputCurrency=0x3aC6bfD8a066306E3Fa90A4c19b0Ab1781E57f5D" target="_blank">Buy on PancakeSwap</a></p>
+  <p><a href="https://www.geckoterminal.com/bsc/pools/0x3aC6bfD8a066306E3Fa90A4c19b0Ab1781E57f5D" target="_blank">Live Chart (GeckoTerminal)</a></p>
+  <p><a href="https://bscscan.com/token/0x3aC6bfD8a066306E3Fa90A4c19b0Ab1781E57f5D" target="_blank">View on BSCScan</a></p>
+</div>
 
-        if (wasAdded) {
-          alert('ZINU token successfully added!');
-        } else {
-          alert('User declined to add token.');
-        }
-      } catch (error) {
-        console.error(error);
-        alert('MetaMask interaction failed.');
-      }
-    }
-  </script>
+<div class="token-info">
+  <h2>🚀 Why Buy $ZINU?</h2>
+  <ul>
+    <li>Fair Launch — No Presale, No VCs</li>
+    <li>Zero Tax Trading</li>
+    <li>LP Locked, Ownership Renounced</li>
+    <li>Community-Powered Growth</li>
+    <li>Listings Incoming</li>
+  </ul>
+</div>
+
+<a class="cta" href="https://pancakeswap.finance/swap?outputCurrency=0x3aC6bfD8a066306E3Fa90A4c19b0Ab1781E57f5D" target="_blank">BUY $ZINU NOW</a>
+
+  </section>  <footer>
+    <p>© 2025 ZuckInu ($ZINU) — All Rights Reserved</p>
+  </footer>
 </body>
 </html>
