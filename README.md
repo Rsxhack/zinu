@@ -1,4 +1,4 @@
-# ZINO ($ZINO) — Meme Coin Awakened on BNB Chain
+[# ZINO ($ZINO) — Meme Coin Awakened on BNB Chain
 
 ![ZINO Logo](public/zinu-token-logo.png)
 
@@ -77,3 +77,4 @@ Clone the repo and run it locally:
 git clone https://github.com/yourusername/zino-token-site.git
 cd zino-token-site
 open index.html
+](https://github.com/Rsxhack/zinu)
