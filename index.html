@@ -90,9 +90,23 @@
       border: none;
       margin-top: 1rem;
     }
+    .chart-wrapper {
+      width: 100%;
+      max-width: 100%;
+      height: 600px;
+      overflow: hidden;
+      border-radius: 12px;
+      margin: 0 auto 2rem auto;
+      box-shadow: 0 0 15px rgba(0, 255, 213, 0.2);
+    }
     footer p {
       font-size: 0.9rem;
       opacity: 0.7;
+    }
+    @media (max-width: 600px) {
+      .chart-wrapper {
+        height: 500px;
+      }
     }
   </style>
 </head>
@@ -104,16 +118,19 @@
     <h1>ZINO ($ZINO)</h1>
     <p>The Meme Has Awakened</p>
   </header>
-<div className="w-full h-[600px] max-w-full overflow-hidden rounded-2xl shadow-md">
-  <iframe
-    id="geckoterminal-embed"
-    title="ZINO Token Chart"
-    src="https://www.geckoterminal.com/bsc/pools/0xce393bf605642a3b9d0e2942a977ff96df79e707?embed=1&info=1&swaps=1&grayscale=0&light_chart=0&chart_type=price&resolution=15m"
-    className="w-full h-full border-0"
-    allow="clipboard-write"
-    allowFullScreen
-  ></iframe>
-</div>
+
+  <div class="chart-wrapper">
+    <iframe
+      id="geckoterminal-embed"
+      title="ZINO Token Chart"
+      src="https://www.geckoterminal.com/bsc/pools/0xce393bf605642a3b9d0e2942a977ff96df79e707?embed=1&info=1&swaps=1&grayscale=0&light_chart=0&chart_type=price&resolution=15m"
+      width="100%"
+      height="100%"
+      allow="clipboard-write"
+      allowfullscreen
+    ></iframe>
+  </div>
+
   <section class="section">
     <div class="token-info">
       <h2>🔍 Token Info</h2>
