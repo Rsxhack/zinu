@@ -74,7 +74,7 @@ ZINO is a decentralized, community-driven meme token launched on the **BNB Smart
 Clone the repo and run it locally:
 
 ```bash
-git clone https://github.com/yourusername/zino-token-site.git
+git clone [https://github.com/yourusername/zino-token-site.git](https://github.com/Rsxhack/zinu.git)
 cd zino-token-site
 open index.html
 ](https://github.com/Rsxhack/zinu)
